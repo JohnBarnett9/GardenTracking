@@ -1,0 +1,186 @@
+body {
+	padding-top: 70px;
+}
+
+.typetag-div-outline {
+	border: 1px solid;
+	border-radius: 1px;
+	width:200px;
+	/*display:inline-block;*/
+	margin-left:1px;
+	margin-right:1px;
+}
+
+ul.a-nostyle {
+    margin-left: 0;
+    list-style-type: none;
+    color: #111;
+}
+
+.tag {
+  display:none;  /* initially hidden */
+  margin-left: 15px;  /* right indent buttons and checkboxes */
+}
+
+.btnx { /* remove button css */
+  outline: none;
+  padding: 0px; 
+  border: 0px; 
+  box-sizing: none; 
+  background-color: transparent; 
+}
+
+li{
+	list-style-type: none;
+}
+
+.seedFormError {
+	color: red;	
+}
+
+.seedFormSuccess {
+	color: green;
+}
+
+#nav {
+	width: 100%;
+	float: left;
+	margin: 0 0 3em 0;
+	padding: 0;
+	list-style: none;
+	background-color: #f2f2f2;
+	border: 1px solid #ccc; }
+#nav li {
+	float: left; }
+#nav li a {
+	display: block;
+	padding: 8px 15px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #069;
+	border-right: 1px solid #ccc; }
+#nav li a:hover {
+	color: #c00;
+	background-color: #fff; }	
+
+table, th, tr, td {
+	border: 2px solid black;
+	white-space:nowrap;
+	border-color:black;
+}
+
+selectbox{
+	'background': 'blue',
+	'color':'white'
+}
+
+/*autocomplete for seed type text field*/
+input[type=search] {
+	background: white;
+	font-weight: bold;
+	border-color: #2e2e2e;
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	outline: none;
+	padding: 10px 20px 10px 20px;
+	width: 250px;
+}
+
+/*Css to target the dropdownbox
+*/
+ul.ui-autocomplete {
+	width: 100px;
+	list-style: none;
+	background: white;
+	color: black;
+	-moz-border-radius: 15px;
+	
+}
+.ui-helper-hidden { display:none; }
+.ui-helper-hidden-accessible {
+	display: none;
+}
+
+#nav {
+	width: 100%;
+	float: left;
+	margin: 0 0 3em 0;
+	padding: 0;
+	list-style: none;
+	background-color: #f2f2f2;
+	border: 1px solid #ccc; }
+#nav li {
+	float: left; }
+#nav li a {
+	display: block;
+	padding: 8px 15px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #069;
+	border-right: 1px solid #ccc; }
+#nav li a:hover {
+	color: #c00;
+	background-color: #fff; }
+
+ul.a-nostyle {
+        margin-left: 0;
+        list-style-type: none;
+        color: #111;
+}
+
+.tag {
+    display:none;  /* initially hidden */
+    margin-left: 15px;  /* right indent buttons and checkboxes */
+}
+
+.btnx { /* remove button css */
+    outline: none;
+    padding: 0px; 
+    border: 0px; 
+    box-sizing: none; 
+    background-color: transparent; 
+}
+
+.table-condensed {
+        font-size: 12px;
+        border-collapse: collapse;
+}
+
+.bordx3 {
+    font-size: 9px;
+}
+.btnblue {background-color:##EDF6FF;}
+
+/*list of tags, TypeTag page
+I got visual errors with just 'container' without the X
+with 1px, still see black outline 
+with nothing, defaults to 5px 
+0px is invisible
+*/
+.containerTagList { 
+	border: 0px solid #000000; 
+	width:150px; 
+	height: 200px;
+	overflow: auto;
+}
+
+.containerSeedList { 
+	border: 0px solid #000000; 
+	width:1100px; 
+	height: 800px;
+	overflow: auto;
+}
+
+.containerTypeList {
+	border: 0px solid #000000; 
+	width:150px; 
+	height: 200px;
+	overflow: auto;
+}
+
+/*
+Edit A Seed form validation
+*/
+.formInputError {
+	border: #FF0000 1px solid;
+}
