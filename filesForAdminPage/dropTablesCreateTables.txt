@@ -1,0 +1,67 @@
+DROP TABLE IF EXISTS sales;
+DROP TABLE IF EXISTS note;
+DROP TABLE IF EXISTS crop;
+DROP TABLE IF EXISTS seedtag;
+DROP TABLE IF EXISTS seed;
+DROP TABLE IF EXISTS typetag;
+DROP TABLE IF EXISTS type;
+DROP TABLE IF EXISTS tag;
+CREATE TABLE type (
+	type_id INT AUTO_INCREMENT,
+	type_name varchar(20),
+	PRIMARY KEY (type_id)
+);
+CREATE TABLE tag (
+	tag_id INT AUTO_INCREMENT,
+	tag_name varchar(20),
+	PRIMARY KEY (tag_id)
+);
+CREATE TABLE seed (
+	seed_id INT AUTO_INCREMENT,
+	type_id INT,
+	name varchar(50),
+	year INT,
+	origin varchar(20),
+	days varchar(10),
+	quantity varchar(20),
+	note varchar(50),
+	PRIMARY KEY (seed_id),
+	FOREIGN KEY (type_id) REFERENCES type(type_id)
+);
+CREATE TABLE typetag (
+	type_id INT,
+	tag_id INT,
+	PRIMARY KEY (type_id, tag_id),
+	FOREIGN KEY (type_id) REFERENCES type(type_id),
+	FOREIGN KEY (tag_id) REFERENCES tag(tag_id)
+);
+CREATE TABLE seedtag (
+	seed_id INT,
+	tag_id INT,
+	PRIMARY KEY (seed_id, tag_id),
+	FOREIGN KEY (seed_id) REFERENCES seed(seed_id),
+	FOREIGN KEY (tag_id) REFERENCES tag(tag_id)
+);
+CREATE TABLE crop (
+	crop_id INT AUTO_INCREMENT,
+	seed_id INT,
+	start_date DATETIME,
+	crop_container_totals varchar(100),
+	PRIMARY KEY (crop_id),
+	FOREIGN KEY (seed_id) REFERENCES seed(seed_id)
+);
+CREATE TABLE note (
+	note_id INT AUTO_INCREMENT,
+	crop_id INT,
+	note_date DATETIME,
+	note_action varchar(30),
+	note_description varchar(200),
+	PRIMARY KEY (note_id),
+	FOREIGN KEY (crop_id) REFERENCES crop(crop_id)
+);
+CREATE TABLE sales (
+	sale_id INT NOT NULL AUTO_INCREMENT,
+	sale_quantity INT,
+	sale_datetime DATETIME,
+	PRIMARY KEY (sale_id)
+);

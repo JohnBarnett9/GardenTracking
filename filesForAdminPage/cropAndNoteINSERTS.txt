@@ -1,0 +1,12 @@
+INSERT INTO crop (crop_id, seed_id, start_date, crop_container_totals) VALUES (null,6,STR_TO_DATE('4-01-2017', '%m-%d-%Y'), 'totals 2inch: 1, 4inch:1, picnic:2');
+INSERT INTO crop (crop_id, seed_id, start_date, crop_container_totals) VALUES (null,6,STR_TO_DATE('3-30-14', '%m-%d-%Y'), 'totals 2inch: 1, 4inch:1, picnic:2');
+INSERT INTO crop (crop_id, seed_id, start_date, crop_container_totals) VALUES (null,2,STR_TO_DATE('3-25-17', '%m-%d-%Y'), 'totals 2inch: 1, 4inch:1, picnic:2');
+INSERT INTO crop (crop_id, seed_id, start_date, crop_container_totals) VALUES (null,2,STR_TO_DATE('4-1-16', '%m-%d-%Y'), 'totals 2inch: 1, 4inch:1, picnic:2');
+INSERT INTO crop (crop_id, seed_id, start_date, crop_container_totals) VALUES (null,2,STR_TO_DATE('4-5-15', '%m-%d-%Y'), 'totals 2inch: 1, 4inch:1, picnic:2');
+
+INSERT INTO note(note_id, crop_id, note_date, note_action, note_description) VALUES (null,1,STR_TO_DATE('4-1-17', '%m-%d-%Y'), 'temp action', 'yogurt 0 2 inch 6 picnic 10');
+INSERT INTO note(note_id, crop_id, note_date, note_action, note_description) VALUES (null,1,STR_TO_DATE('5-1-17', '%m-%d-%Y'), 'temp action','2nd note for crop 1');
+INSERT INTO note(note_id, crop_id, note_date, note_action, note_description) VALUES (null,2,STR_TO_DATE('10-5-15', '%m-%d-%Y'), 'temp action','1st note for crop 2');
+INSERT INTO note(note_id, crop_id, note_date, note_action, note_description) VALUES (null,3,STR_TO_DATE('01-01-01', '%m-%d-%Y'), 'temp action','1st note for crop 3');
+INSERT INTO note(note_id, crop_id, note_date, note_action, note_description) VALUES (null,4,STR_TO_DATE('01-01-01', '%m-%d-%Y'), 'temp action','1st note for crop 4');
+INSERT INTO note(note_id, crop_id, note_date, note_action, note_description) VALUES (null,5,STR_TO_DATE('01-01-01', '%m-%d-%Y'), 'temp action','1st note for crop 5');
