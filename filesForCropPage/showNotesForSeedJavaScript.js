@@ -170,14 +170,11 @@ $( document ).ready(function() {
 	
 	//submitting the edited Note
 	$("body").on("click", "#editnote", function(event){
-		//var unformattedDateTime = $(event.target).prev().prev().prev().val();
 		var unformattedDateTime = $(event.target).prev().prev().prev().prev().prev().val();
 		var formattedDateTime = formatDateTimeLocal(unformattedDateTime);
 		console.log("formattedDateTime = " + formattedDateTime);
-		
 		$("#dateandtimeInputhidden").val(formattedDateTime);
-		//$("#editnoteform").submit(); why is this not submitting?
-		$(event.target).parent().submit();//works, why?
+		$(event.target).parent().submit();
 	});
 	
 	$("body").on("click", ".deletenotebutton", function(event){
