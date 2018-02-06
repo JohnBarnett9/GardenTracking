@@ -47,12 +47,10 @@ $( document ).ready(function() {
 	
 	
 	/*
+	This event handler processes a new Note being added to a Crop, when sort order is Type.
 	one of the classes of the 'Add Note to Crop' button with radio Sort order Type, is addnotetocrop-type
 	*/
 	$("body").on("click",".addnotetocrop-type", function(event){
-		//var idThreePrev = $(event.target).prev().prev().prev().attr("id");
-		//console.log("idThreePrev = " + idThreePrev);
-		//var unformattedDateTime = $(event.target).prev().prev().prev().val(); before I did radio buttons 
 		var fivePrevId = $(event.target).prev().prev().prev().prev().prev().attr("id");
 		console.log("fivePrevId = " + fivePrevId);
 		var idthing = $(event.target).prev().prev().prev().prev().prev().attr("id");
@@ -60,32 +58,18 @@ $( document ).ready(function() {
 		var unformattedDateTime = $(event.target).prev().prev().prev().prev().prev().val();
 		console.dir(unformattedDateTime);
 		var formattedDateTime = formatDateTimeLocal(unformattedDateTime);
-		//console.log("formattedDateTime = " + formattedDateTime);
 		
 		//set hidden input to formatted date time 
 		$(event.target).next().val(formattedDateTime);
 		
-		//var salesQuantity = $(event.target).prev().prev().prev().child().next().val();
-		//cnosole.log("salesQuantity = " + salesQuantity);
-		
-		//var salesID = $(event.target).prev().prev().prev().child().next().attr("id");
-		//var salesID = $(event.target).attr("id"); addNoteToCropFormButton-3
-		//var salesID = $(event.target).prev().attr("id"); noteInput
-		//var salesID = $(event.target).prev().prev().attr("id"); undefined
-		//var salesID = $(event.target).prev().prev().prev().attr("id"); extranotes
-		//var salesID = $(event.target).prev().prev().prev().child().attr("id"); not a function
-		//var salesID = $(event.target).prev().prev().prev().child().next().val(); not a function
-		//var salesID = $(event.target).prev().prev().prev().prev().attr("id"); spanofaction
-		//var salesID = $(event.target).prev().prev().prev().prev().prev().attr("id"); dateandtimeInput
-		//var salesID = $(event.target).prev().prev().prev().prev().prev().val();
-		
-		//var salesID = $(event.target).parent().find("#extranotes");
-		//var salesID = $(event.target).parent().find("#extranotes").find("salequantityinput");
-		//var salesID = $(event.target).parent().find("#extranotes").find("salequantityinput").val(); undefined
+		/*
+		Sales Page is not production ready yet.
+		This line will get the value of the id of the sales text field, 
+		that is to the left of 'Add Note to Crop' button.
+		*/
 		var salesID = $(event.target).parent().find("#extranotes").find("salequantityinput").attr("id");
 		
 		console.log("salesID = " + salesID);
-		
 		
 		//submit form
 		$(event.target).parent().submit();
